@@ -4,43 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writeups - Hacksparo Blog</title>
-    <!-- Include any necessary stylesheets or fonts here -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="writeups.html">Writeups</a></li>
-            <li><a href="tools.html">Tools</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<body class="min-h-screen flex flex-col bg-gray-900 text-white font-mono">
+    <!-- Navigation -->
+    <header class="navbar">
+        <nav class="container mx-auto flex justify-center relative">
+            <div class="menu flex flex-col items-center">
+                <a href="index.html">Home</a>
+                <a href="writeups.html">Writeups</a>
+                <a href="tools.html">Tools</a>
+                <a href="resources.html">Resources</a>
+                <a href="about.html">About Me</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button id="menuButton" class="text-2xl">☰</button>
+        </nav>
+    </header>
 
     <!-- Main Content -->
-    <main>
-        <section>
-            <h1>Writeups</h1>
-            <p>Welcome to the Writeups section of Hacksparo Blog. Here, you'll find detailed analyses, walkthroughs, and explanations of various hacking techniques, challenges, and scenarios.</p>
-            <article>
-                <h2>Writeup Title 1</h2>
-                <p>This is a brief summary or introduction to the writeup. It describes what the writeup is about and what readers can expect to learn.</p>
-                <p><a href="writeup1.html">Read More...</a></p>
+    <main class="flex-grow container mx-auto p-4">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Writeup Title 1</h2>
+                <p class="text-gray-400">This is a brief summary or introduction to the writeup. It describes what the writeup is about and what readers can expect to learn.</p>
+                <a href="writeup1.html" class="text-blue-400 hover:underline mt-4 inline-block">Read More...</a>
             </article>
-            <article>
-                <h2>Writeup Title 2</h2>
-                <p>This is a brief summary or introduction to the writeup. It describes what the writeup is about and what readers can expect to learn.</p>
-                <p><a href="writeup2.html">Read More...</a></p>
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Writeup Title 2</h2>
+                <p class="text-gray-400">This is a brief summary or introduction to the writeup. It describes what the writeup is about and what readers can expect to learn.</p>
+                <a href="writeup2.html" class="text-blue-400 hover:underline mt-4 inline-block">Read More...</a>
             </article>
             <!-- Add more articles as needed -->
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Hacksparo Blog. All rights reserved.</p>
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <p>&copy; 2024 Hacksparo Blog. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Script for Menu Toggle -->
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            const menu = document.querySelector('.navbar .menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        });
+    </script>
 </body>
 </html>
