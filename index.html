@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writeups - Hacksparo Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .navbar {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #00ff00;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .arrow-back {
+            color: #00ff00;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .arrow-back:hover {
+            color: #00cc00;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 10px;
+            border-top: 2px solid #00ff00;
+            text-align: center;
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-900 text-white font-mono">
-    <!-- Navigation -->
+<body class="min-h-screen flex flex-col">
     <header class="navbar">
-        <nav class="container mx-auto flex justify-center relative">
-            <div class="menu flex flex-col items-center">
-                <a href="index.html">Home</a>
-                <a href="writeups.html">Writeups</a>
-                <a href="tools.html">Tools</a>
-                <a href="resources.html">Resources</a>
-                <a href="about.html">About Me</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <button id="menuButton" class="text-2xl">☰</button>
+        <nav class="container mx-auto flex justify-center">
+            <a href="index.html">&#8592; Back</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow container mx-auto p-4">
+        <h1 class="text-center text-3xl font-semibold mb-4">Writeups</h1>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h2 class="text-xl font-semibold mb-4">Writeup Title 1</h2>
@@ -39,23 +64,10 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto">
+    <footer class="footer">
         <div class="container text-center">
             <p>&copy; 2024 Hacksparo Blog. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Script for Menu Toggle -->
-    <script>
-        document.getElementById('menuButton').addEventListener('click', function() {
-            const menu = document.querySelector('.navbar .menu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
-        });
-    </script>
 </body>
 </html>
